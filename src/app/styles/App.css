@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-VariableFont_wght.woff2);
+}
+
+*::selection {
+  @apply bg-selectionBg text-textColor;
+}
+
+body {
+  font: 18px "Manrope", "Montserrat", serif;
+  @apply text-textColor bg-slate-100 w-420:text-lg;
+}
+
+.wrapper {
+  @apply flex flex-col min-h-[100svh];
+}
+
+input {
+  background-color: #fff;
+}
+
+.main {
+  @apply grow;
+}
+
+.container {
+  @apply max-w-[1620px] px-[10px] mx-auto;
+}
+
+.inner {
+  @apply flex items-center justify-between;
+}
+
+.btn {
+  @apply flex items-center justify-center text-lg p-[15px] max-w-[280px] w-full rounded-[30px] bg-textColor text-invertedTextColor cursor-pointer transition-all text-center shadow-xl hover:bg-textColorHover;
+}
+
+.btn.darkened {
+  @apply bg-textColorHover text-invertedTextColor hover:bg-textColorDoubleHover;
+}
+
+.btn.inverted {
+  @apply bg-invertedTextColor text-textColor hover:bg-gray;
+}
+
+.btn.card {
+  @apply max-w-[200px];
+}
+
+.btn.small {
+  @apply w-[50px] h-[50px] text-2xl font-bold;
+}
+
+.btn.smallest {
+  @apply w-[35px] h-[35px] p-[5px] text-sm;
+}
+
+.img {
+  @apply h-full w-full object-cover;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box {
+  @apply relative rounded-[30px] bg-invertedTextColor text-textColor;
+}
+
+.input {
+  @apply w-full bg-transparent text-[18px] text-white outline-none;
+}
+
+input::placeholder {
+  @apply text-placeholder;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.icon {
+  @apply text-placeholder transition-all;
+}
+
+section {
+  @apply mb-[70px] w-1050:mb-[40px];
+}
+
+section .title-box {
+  @apply mb-[80px] w-930:mb-[40px];
+}
+
+section .title-box.withoutMargin {
+  @apply mb-[30px];
+}
+
+section .title-box h2 {
+  @apply text-5xl font-bold mb-[30px] leading-[60px] w-930:text-4xl w-930:mb-[15px] w-420:text-3xl;
+}
+
+section .title-box h3 {
+  @apply text-3xl font-bold leading-none w-930:text-2xl w-420:text-xl;
+}
+
+section .section-content h4 {
+  @apply text-4xl font-bold mb-[30px] leading-none w-420:text-2xl;
+}
+
+.link {
+  @apply underline;
+}
+
+input,
+textarea {
+  @apply w-full text-lg outline-none;
+}
+
+.counter-item {
+  @apply flex items-center justify-center w-[50px] h-[50px] rounded-[50%] bg-textColor text-invertedTextColor text-xl font-extrabold shrink-0;
+}
