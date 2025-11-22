@@ -2,6 +2,8 @@ import { faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FirstStep, FourthStep, SecondStep, ThirdStep } from './images';
 
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export const links = {
    telegram: 'https://t.me/photodoc39',
    whatsapp: 'https://wa.me/79527964873',
@@ -130,81 +132,6 @@ export const photoDocTypes = [TYPES.ELECTRO, TYPES.PHYSICAL, TYPES.ELECTRO_PHYSI
 export const photoColorTypes = [PHOTO_COLOR_COLORED, PHOTO_COLOR_COLORLESS];
 
 export const photoClothArr = [PHOTO_WITHOUT_CLOTH, PHOTO_WITH_CLOTH];
-
-export const photoDocumentArr = [
-   {
-      id: SIZE_25x35,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_25x35}`,
-      descr: 'Для школьных документов и удостоверений',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, фото на, справка, фото на справку, фото на удостоверение, удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-   {
-      id: SIZE_3x4,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_3x4}`,
-      descr: 'Стандартный размер для большинства документов',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, фото на удостоверение, удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-   {
-      id: SIZE_35x45,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_35x45}`,
-      descr: 'Подойдет на паспорт, загранпаспорт, визы',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, паспорт, фото на паспорт, фото на загранпаспорт, фото на визу, шенген, виза, загранпаспорт, фото на удостоверение, удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-   {
-      id: SIZE_4x6,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_4x6}`,
-      descr: 'На различные удостоверения, военные документы',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-   {
-      id: SIZE_45x60,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_45x60}`,
-      descr: 'Подходит для различных удостоверений и карт',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-   {
-      id: SIZE_9x12,
-      type: PHOTODOC,
-      name: `Фото ${SIZE_9x12}`,
-      descr: 'Для официальных документов и портретов',
-      priceOnline: PHOTODOC_PRICE_ONLINE,
-      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
-      physicalQuantity: 1,
-      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
-      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
-      pathname: PATHNAMES.constructor,
-   },
-];
 
 export const MainServicesArr = [
    {
@@ -418,6 +345,81 @@ export const retouchPriceData = [
          'ретушь, обработка, фото, фотографии, ретушь фотографий, фото ретушь, фотография ретушь, фотографии ретушь',
       ],
       pathname: PATHNAMES.retouch,
+   },
+];
+
+export const photoDocumentArr = [
+   {
+      id: SIZE_25x35,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_25x35}`,
+      descr: 'Для школьных документов и удостоверений',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, фото на, справка, фото на справку, фото на удостоверение, удостоверение',
+      pathname: PATHNAMES.constructor,
+   },
+   {
+      id: SIZE_3x4,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_3x4}`,
+      descr: 'Стандартный размер для большинства документов',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, фото на удостоверение, удостоверение',
+      pathname: PATHNAMES.constructor,
+   },
+   {
+      id: SIZE_35x45,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_35x45}`,
+      descr: 'Подойдет на паспорт, загранпаспорт, визы',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, паспорт, фото на паспорт, фото на загранпаспорт, фото на визу, шенген, виза, загранпаспорт, фото на удостоверение, удостоверение',
+      pathname: PATHNAMES.constructor,
+   },
+   {
+      id: SIZE_4x6,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_4x6}`,
+      descr: 'На различные удостоверения, военные документы',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
+      pathname: PATHNAMES.constructor,
+   },
+   {
+      id: SIZE_45x60,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_45x60}`,
+      descr: 'Подходит для различных удостоверений и карт',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: PHOTODOC_PHYSICAL_QUANTITY,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
+      pathname: PATHNAMES.constructor,
+   },
+   {
+      id: SIZE_9x12,
+      type: PHOTODOC,
+      name: `Фото ${SIZE_9x12}`,
+      descr: 'Для официальных документов и портретов',
+      priceOnline: PHOTODOC_PRICE_ONLINE,
+      priceOrder: PHOTODOC_PRICE_ONLINE + PHOTODOC_PRICE_DELIVERY,
+      physicalQuantity: 1,
+      AdditionalPrice: PHOTODOC_PRICE_ADDITIONAL,
+      tag: 'фото, фотография, фотографии, документы, справка, фото на справку, фото на, удостоверение, фото на удостоверение',
+      pathname: PATHNAMES.constructor,
    },
 ];
 

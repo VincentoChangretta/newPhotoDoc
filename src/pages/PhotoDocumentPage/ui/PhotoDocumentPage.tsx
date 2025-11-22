@@ -1,5 +1,11 @@
+import { SetPhotoDoc } from 'features/SetPhotoDoc';
+
 const PhotoDocumentPage = () => {
-   return <div>PhotoDocumentPage</div>;
+   return (
+      <>
+         <SetPhotoDoc />
+      </>
+   );
 };
 
 export default PhotoDocumentPage;

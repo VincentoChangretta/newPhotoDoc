@@ -1,3 +1,4 @@
+import { GetProductsData } from 'features/GetProductData/ui/GetProductsData';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PATHNAMES } from 'shared/const/consts';
@@ -7,7 +8,6 @@ import { PhotoSlider } from 'widgets/PhotoSlider/ui/PhotoSlider';
 
 export const MainTop = () => {
    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
    useEffect(() => {
       const handleResize = () => {
          setScreenWidth(window.innerWidth);
@@ -30,6 +30,7 @@ export const MainTop = () => {
                      <span className='block'>Быстро.</span>
                      <span className='block'>Эффективно.</span>
                   </h1>
+                  <GetProductsData />
                   <Link
                      className='btn mb-[10px] w-1400:mx-auto w-1050:mx-0'
                      to={PATHNAMES.photoDocument}

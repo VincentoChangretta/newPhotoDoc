@@ -28,7 +28,7 @@ export enum AppRoutes {
 // Пути
 export const RoutePaths: Record<AppRoutes, string> = {
    [AppRoutes.MAIN]: '/',
-   [AppRoutes.PHOTO_DOCUMENT]: '/photo-document',
+   [AppRoutes.PHOTO_DOCUMENT]: '/photodocument',
    [AppRoutes.RESTORATION]: '/restoration',
    [AppRoutes.RETOUCH]: '/retouch',
    [AppRoutes.ABOUT_US]: '/about-us',
